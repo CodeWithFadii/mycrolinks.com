@@ -4,7 +4,9 @@
   "description": "Fetches GitHub projects for mycrolinks.com",
   "main": "fetch-projects.js",
   "scripts": {
-    "start": "node fetch-projects.js"
+    "start": "node fetch-projects.js",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && mkdir -p dist && cp -rv css fonts images js assets dist/ && cp -v index.html privacy.html terms.html 404.html projects.json google537b84cb995e6eac.html app-ads.txt dist/"
   },
   "dependencies": {
     "@octokit/rest": "^20.0.2",
